@@ -1,6 +1,6 @@
-/**
- * aqui é onde geramos o site com base noque o usuario altera no editor
- */
+
+ //aqui é onde geramos o site com base noque o usuario altera no editor
+
 
 RainbowEngine.prototype.gerarCSS = function() {
     const { fonte, corPrimaria, corSecundaria } = this.dados.global;

@@ -1,16 +1,14 @@
 class RainbowEngine {
     constructor() {
-        // MELHORIA 1: Tenta carregar do LocalStorage, se não, usa o padrão
         this.dados = this.carregarEstado() || JSON.parse(JSON.stringify(ESTADO_PADRAO));
         
-        this.arquivos = {}; // Armazena blobs reais para o ZIP
+        this.arquivos = {};
         this.painel = document.getElementById('painel-editor');
         this.frame = document.getElementById('frame-site');
         this.init();
     }
 
     init() {
-        // Restaura o nome do projeto se existir
         const nomeSalvo = localStorage.getItem('rainbow_projeto_nome');
         if(nomeSalvo) document.getElementById('nome-projeto').value = nomeSalvo;
 
@@ -23,7 +21,7 @@ class RainbowEngine {
         });
     }
 
-    
+
     salvarEstado() {
         localStorage.setItem('rainbow_dados_site', JSON.stringify(this.dados));
     }

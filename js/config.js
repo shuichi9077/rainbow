@@ -1,3 +1,5 @@
+// aqui tem as configurações padrão do construtor de sites
+
 const ESTILOS_PADRAO = {
     fundo: '#ffffff', texto: '#1e293b', padding: 80, borda: 0, layout: 'container'
 };
@@ -10,12 +12,12 @@ const ESTADO_PADRAO = {
     },
     secoes: [
         {
-            id: 'cabecalho', tipo: 'header', titulo: 'Cabeçalho & Navegação', ativo: true,
+            id: 'cabecalho', tipo: 'header', titulo: 'Cabeçalho', ativo: true,
             dados: { logoTexto: 'rainbow.UX', logoImg: null, links: ['Home', 'Serviços', 'Contato'] },
             estilo: { ...ESTILOS_PADRAO, fundo: '#ffffff', padding: 20, layout: 'full', sombra: true }
         },
         {
-            id: 'hero', tipo: 'hero', titulo: 'Banner Principal (Hero)', ativo: true,
+            id: 'hero', tipo: 'hero', titulo: 'Bandeira', ativo: true,
             dados: { 
                 titulo: 'Eleve seu Negócio', 
                 subtitulo: 'Soluções digitais de alta performance para empresas que buscam o extraordinário.', 
@@ -25,7 +27,7 @@ const ESTADO_PADRAO = {
             estilo: { ...ESTILOS_PADRAO, fundo: '#1e293b', texto: '#ffffff', padding: 120, layout: 'full', alinhar: 'center' }
         },
         {
-            id: 'servicos', tipo: 'grid', titulo: 'Grid de Serviços', ativo: true,
+            id: 'servicos', tipo: 'grid', titulo: 'Grade', ativo: true,
             dados: {
                 titulo: 'O Que Fazemos',
                 itens: [
@@ -47,7 +49,7 @@ const ESTADO_PADRAO = {
             estilo: { ...ESTILOS_PADRAO, padding: 100 }
         },
         {
-            id: 'galeria', tipo: 'carousel', titulo: 'Portfólio / Galeria', ativo: true,
+            id: 'galeria', tipo: 'carousel', titulo: 'Galeria', ativo: true,
             dados: { titulo: 'Nossos Projetos', imagens: [] },
             estilo: { ...ESTILOS_PADRAO, fundo: '#111827', texto: '#ffffff', layout: 'carousel', colunas: 3 }
         },
