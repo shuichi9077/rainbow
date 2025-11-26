@@ -54,7 +54,7 @@ const ESTADO_PADRAO = {
             estilo: { ...ESTILOS_PADRAO, fundo: '#111827', texto: '#ffffff', layout: 'carousel', colunas: 3 }
         },
         {
-            id: 'faq', tipo: 'faq', titulo: 'Perguntas Frequentes', ativo: false,
+            id: 'faq', tipo: 'faq', titulo: 'Perguntas Frequentes', ativo: true,
             dados: {
                 titulo: 'Dúvidas?',
                 itens: [
