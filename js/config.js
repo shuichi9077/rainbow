@@ -1,4 +1,9 @@
-// aqui tem as configurações padrão do construtor de sites
+// Configurações padrão e estado inicial
+
+const LISTA_FONTES = [
+    'Inter', 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 
+    'Playfair Display', 'Oswald', 'Merriweather', 'Poppins', 'Nunito'
+];
 
 const ESTILOS_PADRAO = {
     fundo: '#ffffff', texto: '#1e293b', padding: 80, borda: 0, layout: 'container'
@@ -6,18 +11,29 @@ const ESTILOS_PADRAO = {
 
 const ESTADO_PADRAO = {
     global: {
+        nomeSite: 'Meu Site Incrível',
+        favicon: null,
         fonte: 'Inter',
+        tamanhoFonteBase: 16,
         corPrimaria: '#2563eb',
-        corSecundaria: '#1e293b'
+        corSecundaria: '#1e293b',
+        bordaGlobal: 8,
+        sombraGlobal: 'md',
+        estiloBotoes: 'pill',
+        fitImagens: 'cover' // Configuração única para todo o projeto
     },
     secoes: [
         {
             id: 'cabecalho', tipo: 'header', titulo: 'Cabeçalho', ativo: true,
-            dados: { logoTexto: 'rainbow.UX', logoImg: null, links: ['Home', 'Serviços', 'Contato'] },
+            dados: { 
+                logoTexto: 'rainbow.UX', 
+                logoImg: null, 
+                links: ['Home', 'Serviços', 'Contato'] 
+            },
             estilo: { ...ESTILOS_PADRAO, fundo: '#ffffff', padding: 20, layout: 'full', sombra: true }
         },
         {
-            id: 'hero', tipo: 'hero', titulo: 'Bandeira', ativo: true,
+            id: 'hero', tipo: 'hero', titulo: 'Banner', ativo: true,
             dados: { 
                 titulo: 'Eleve seu Negócio', 
                 subtitulo: 'Soluções digitais de alta performance para empresas que buscam o extraordinário.', 
@@ -65,9 +81,14 @@ const ESTADO_PADRAO = {
             estilo: { ...ESTILOS_PADRAO, fundo: '#ffffff' }
         },
         {
-            id: 'contato', tipo: 'form', titulo: 'Contato', ativo: true,
-            dados: { titulo: 'Vamos Conversar', email: 'contato@empresa.com' },
-            estilo: { ...ESTILOS_PADRAO, fundo: '#eff6ff', borda: 16 }
+            id: 'contato', tipo: 'form', titulo: 'Conecte-se', ativo: true,
+            dados: { 
+                titulo: 'Nossas Redes', 
+                links: [
+                    { tipo: 'email', valor: 'contato@exemplo.com', url: 'mailto:contato@exemplo.com', img: 'img/email.png' }
+                ] 
+            },
+            estilo: { ...ESTILOS_PADRAO, fundo: '#eff6ff', texto: '#1e293b', borda: 16 }
         },
         {
             id: 'rodape', tipo: 'footer', titulo: 'Rodapé', ativo: true,
